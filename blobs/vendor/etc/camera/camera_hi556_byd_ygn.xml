@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<CameraModuleConfigurationRoot>
+  <ModuleInfo>
+    <SensorName>hi556_byd_ygn</SensorName>
+    <FlashName>hw_minor</FlashName>
+    <ActuatorName/>
+    <ChromatixName>ov13855_byd_lnd_chromatix</ChromatixName>
+    <EepromName/>
+    <ModesSupported>1</ModesSupported>
+  </ModuleInfo>
+  <CSIInfo>
+    <CSIDCore>1</CSIDCore>
+    <LaneMask>0x7</LaneMask>
+    <LaneAssign>0x4320</LaneAssign>
+    <ComboMode>0</ComboMode>
+  </CSIInfo>
+  <LensInfo>
+    <FocalLength/>
+    <FNumber/>
+    <TotalFocusDistance/>
+    <HorizontalViewAngle/>
+    <VerticalViewAngle/>
+    <MinFocusDistance/>
+  </LensInfo>
+  <PowerSequece type="POWER_UP">
+    <power seqType="VREG" seqVal="VIO" cfgVal="1800000" delay="0"/>
+    <power seqType="VREG" seqVal="VANA" cfgVal="2800000" delay="0"/>
+    <power seqType="VREG" seqVal="VDIG" cfgVal="1200000" delay="0"/>
+    <power seqType="CLK" seqVal="MCLK" cfgVal="24000000" delay="10"/>
+    <power seqType="GPIO" seqVal="STANDBY" cfgVal="HIGH" delay="10"/>
+    <power seqType="GPIO" seqVal="RESET" cfgVal="HIGH" delay="10"/>
+  </PowerSequece>
+  <PowerSequece type="POWER_DOWN">
+    <power seqType="GPIO" seqVal="RESET" cfgVal="LOW" delay="10"/>
+    <power seqType="GPIO" seqVal="STANDBY" cfgVal="LOW" delay="10"/>
+    <power seqType="CLK" seqVal="MCLK" cfgVal="0" delay="1"/>
+    <power seqType="VREG" seqVal="VDIG" cfgVal="0" delay="0"/>
+    <power seqType="VREG" seqVal="VANA" cfgVal="0" delay="0"/>
+    <power seqType="VREG" seqVal="VIO" cfgVal="0" delay="0"/>
+  </PowerSequece>
+</CameraModuleConfigurationRoot>

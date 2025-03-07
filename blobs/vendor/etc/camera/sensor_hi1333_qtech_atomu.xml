@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<SensorConfigurationRoot>
+  <sensorSlaveInfo>
+    <sensorI2CInfo slaveAddr="0x42" i2cMode="FAST" i2cAddrType="WORD"/>
+    <sensorIdInfo reg="0x0F16" id="0x3313" mask="0"/>
+  </sensorSlaveInfo>
+  <sensorOutput format="BAYER" connectMode="MIPI_CSI" rawOutput="10BIT" bayerPattern="GBRG"/>
+  <sensorProperty>
+    <sensingMethod>ONE_CHIP_COLOR_AREA</sensingMethod>
+    <pixSize>1.12</pixSize>
+    <cropFactor>1.0</cropFactor>
+    <focalLength35mm>26.4</focalLength35mm>
+  </sensorProperty>
+  <pixelArraySize>
+    <arraySizeWidth>4208</arraySizeWidth>
+    <arraySizeHeight>3120</arraySizeHeight>
+    <leftDummy>8</leftDummy>
+    <rightDummy>8</rightDummy>
+    <topDummy>8</topDummy>
+    <bottomDummy>8</bottomDummy>
+  </pixelArraySize>
+  <colorLevel>
+    <whiteLevel>1023</whiteLevel>
+    <rPedestal>64</rPedestal>
+    <grPedestal>64</grPedestal>
+    <gbPedestal>64</gbPedestal>
+    <bPedestal>64</bPedestal>
+  </colorLevel>
+  <opticalBlackRegionArray>
+    <!--
+    <blackRegion>0,0,0,0</blackRegion>
+  -->
+  </opticalBlackRegionArray>
+  <noiseCoeff>
+    <gradientS>1.768245e-06</gradientS>
+    <offsetS>2.799726e-05</offsetS>
+    <gradientO>6.505592e-12</gradientO>
+    <offsetO>2.533052e-06</offsetO>
+  </noiseCoeff>
+  <rolloffConfig>
+    <enable>0</enable>
+    <fullSizeWidth>0</fullSizeWidth>
+    <fullSizeHeight>0</fullSizeHeight>
+    <fullSizeLeftCrop>0</fullSizeLeftCrop>
+    <fullSizeTopCrop>0</fullSizeTopCrop>
+  </rolloffConfig>
+  <sensorOutputRegs>
+    <xOutputReg/>
+    <yOutputReg/>
+    <lineLengthReg>0x0008</lineLengthReg>
+    <frameLengthReg>0x0006</frameLengthReg>
+  </sensorOutputRegs>
+  <numOfFrameSkip>1</numOfFrameSkip>
+  <numOfHDRFrameSkip>3</numOfHDRFrameSkip>
+  <maxPiplineFrameDelay>2</maxPiplineFrameDelay>
+  <sensorStreamInfo index="0">
+    <visualChannel cid="0">
+      <dataType>RAW10</dataType>
+      <decodeFormat>DECODE_10BIT</decodeFormat>
+      <metaDimWidth/>
+      <metaDimHeight/>
+      <statsType/>
+    </visualChannel>
+    <pixDataFormat>BAYER</pixDataFormat>
+  </sensorStreamInfo>
+  <sensorStreamInfo index="1">
+    <visualChannel cid="1">
+      <dataType>EMBED</dataType>
+      <decodeFormat>DECODE_10BIT</decodeFormat>
+      <metaDimWidth/>
+      <metaDimHeight/>
+      <statsType/>
+    </visualChannel>
+    <pixDataFormat>META</pixDataFormat>
+  </sensorStreamInfo>
+  <metaOutInfo index="0">
+    <width>0</width>
+    <height>0</height>
+    <dataType>0</dataType>
+    <statsType>0</statsType>
+  </metaOutInfo>
+  <csiConfig>
+    <laneCount>4</laneCount>
+    <settleCount>0x15</settleCount>
+    <isCsi3Phase>0</isCsi3Phase>
+  </csiConfig>
+  <aecDataMap>
+    <aecFunctionType>
+      <fillExp>CAMKIT_FILL_EXP_DEFAULT</fillExp>
+      <calcExp>CAMKIT_CALC_EXP_DEFAULT</calcExp>
+      <realToRegGain>CAMKIT_REAL_TO_REG_DEFAULT</realToRegGain>
+      <regToRealGain>CAMKIT_REG_TO_REAL_DEFAULT</regToRealGain>
+      <dGainCalc>CAMKIT_DGAIN_CALC_DEFAULT</dGainCalc>
+    </aecFunctionType>
+    <aecInfo>
+      <gain min="1.0" max="32.0"/>
+      <analogGain min="1.0" max="16.0"/>
+      <digGain min="1.0" max="2.0"/>
+      <linecount min="4" max="907260"/>
+      <AGainMapCoeff m0="1" m1="0" m2="0" c0="16" c1="16" c2="0"/>
+      <AGainMap/>
+      <digGainDecimator>512</digGainDecimator>
+      <vertOffset>8</vertOffset>
+    </aecInfo>
+    <aecOpMap i2cAddrType="WORD" i2cDataType="WORD">
+      <aecSetting type="GROUPON">
+        <setting>0x0046, 0x0100, 0x00</setting>
+      </aecSetting>
+      <aecSetting type="VTS">
+        <reg>0x0006[15:1], value[15:1]</reg>
+      </aecSetting>
+      <aecSetting type="LINECOUNT">
+        <reg>0x0073[7:0], value[23:16]</reg>
+        <reg>0x0074[15:0], value[15:0]</reg>
+      </aecSetting>
+      <aecSetting type="AGAIN">
+        <reg>0x0076[15:0], value[15:0]</reg>
+      </aecSetting>
+      <aecSetting type="DGAIN_GR">
+        <reg>0x0078[15:0], value[15:0]</reg>
+      </aecSetting>
+      <aecSetting type="DGAIN_R">
+        <reg>0x007a[15:0], value[15:0]</reg>
+      </aecSetting>
+      <aecSetting type="DGAIN_B">
+        <reg>0x007c[15:0], value[15:0]</reg>
+      </aecSetting>
+      <aecSetting type="DGAIN_GB">
+        <reg>0x007e[15:0], value[15:0]</reg>
+      </aecSetting>
+      <aecSetting type="GROUPOFF">
+        <setting>0x0046, 0x0000, 0x00</setting>
+      </aecSetting>
+    </aecOpMap>
+  </aecDataMap>
+  <sensorStreamon>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x0a00, 0x0100, 0x00</setting>
+    </settingArray>
+  </sensorStreamon>
+  <sensorStreamoff>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x0a00, 0x0000, 0x00</setting>
+    </settingArray>
+  </sensorStreamoff>
+  <sensorGroupon>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x0046, 0x0100, 0x00</setting>
+    </settingArray>
+  </sensorGroupon>
+  <sensorGroupoff>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x0046, 0x0000, 0x00</setting>
+    </settingArray>
+  </sensorGroupoff>
+  <sensorDumpRegs>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" i2cOperateType="READ" delay="0">
+      <setting>0x0956, 0x0000, 0x00</setting>
+      <setting>0x0a00, 0x0000, 0x00</setting>
+      <setting>0x0902, 0x0000, 0x00</setting>
+    </settingArray>
+  </sensorDumpRegs>
+  <initSetting>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x2ffe, 0xd800, 0x00</setting>
+      <setting>0x0e04, 0x0013, 0x00</setting>
+      <setting>0x3048, 0x5020, 0x00</setting>
+      <setting>0x0f30, 0x001f, 0x00</setting>
+      <setting>0x0f36, 0x001f, 0x00</setting>
+      <setting>0x0c00, 0x11d8, 0x00</setting>
+      <setting>0x0c02, 0x0011, 0x00</setting>
+      <setting>0x0c04, 0x5000, 0x00</setting>
+      <setting>0x0c06, 0x01eb, 0x00</setting>
+      <setting>0x0c10, 0x0040, 0x00</setting>
+      <setting>0x0c12, 0x0040, 0x00</setting>
+      <setting>0x0c14, 0x0040, 0x00</setting>
+      <setting>0x0c16, 0x0040, 0x00</setting>
+      <setting>0x0c18, 0x8000, 0x00</setting>
+      <setting>0x0c62, 0x0194, 0x00</setting>
+      <setting>0x0c64, 0x0286, 0x00</setting>
+      <setting>0x0c66, 0x0294, 0x00</setting>
+      <setting>0x0c68, 0x0100, 0x00</setting>
+      <setting>0x0cb2, 0x0200, 0x00</setting>
+      <setting>0x0714, 0xe8e8, 0x00</setting>
+      <setting>0x0716, 0xede8, 0x00</setting>
+      <setting>0x000e, 0x0100, 0x00</setting>
+      <setting>0x0a10, 0x400c, 0x00</setting>
+      <setting>0x003e, 0x0000, 0x00</setting>
+      <setting>0x0074, 0x09da, 0x00</setting>
+      <setting>0x0a04, 0x03ea, 0x00</setting>
+      <setting>0x0076, 0x0000, 0x00</setting>
+      <setting>0x0724, 0x0f1f, 0x00</setting>
+      <setting>0x0068, 0x0703, 0x00</setting>
+      <setting>0x0060, 0x0000, 0x00</setting>
+      <setting>0x0062, 0x0200, 0x00</setting>
+      <setting>0x075e, 0x0535, 0x00</setting>
+      <setting>0x0012, 0x0fcd, 0x00</setting>
+      <setting>0x0806, 0x0002, 0x00</setting>
+      <setting>0x0900, 0x0300, 0x00</setting>
+      <setting>0x0902, 0xc219, 0x00</setting>
+      <setting>0x095a, 0x0099, 0x00</setting>
+      <setting>0x095c, 0x1111, 0x00</setting>
+      <setting>0x095e, 0xbac0, 0x00</setting>
+      <setting>0x0960, 0xfffe, 0x00</setting><!--mipi-->
+      <setting>0x0a38, 0x080c, 0x00</setting>
+      <setting>0x0a3a, 0x140c, 0x00</setting>
+      <setting>0x0a3c, 0x280c, 0x00</setting>
+      <setting>0x0a3e, 0x340c, 0x00</setting>
+      <setting>0x0a40, 0x0418, 0x00</setting>
+      <setting>0x0a42, 0x1818, 0x00</setting>
+      <setting>0x0a44, 0x2418, 0x00</setting>
+      <setting>0x0a46, 0x3818, 0x00</setting>
+      <setting>0x0a48, 0x082c, 0x00</setting>
+      <setting>0x0a4a, 0x142c, 0x00</setting>
+      <setting>0x0a4c, 0x282c, 0x00</setting>
+      <setting>0x0a4e, 0x342c, 0x00</setting>
+      <setting>0x0a50, 0x0438, 0x00</setting>
+      <setting>0x0a52, 0x1838, 0x00</setting>
+      <setting>0x0a54, 0x2438, 0x00</setting>
+      <setting>0x0a56, 0x3838, 0x00</setting>
+      <setting>0x0a58, 0x0808, 0x00</setting>
+      <setting>0x0a5a, 0x1408, 0x00</setting>
+      <setting>0x0a5c, 0x2808, 0x00</setting>
+      <setting>0x0a5e, 0x3408, 0x00</setting>
+      <setting>0x0a60, 0x041c, 0x00</setting>
+      <setting>0x0a62, 0x181c, 0x00</setting>
+      <setting>0x0a64, 0x241c, 0x00</setting>
+      <setting>0x0a66, 0x381c, 0x00</setting>
+      <setting>0x0a68, 0x0828, 0x00</setting>
+      <setting>0x0a6a, 0x1428, 0x00</setting>
+      <setting>0x0a6c, 0x2828, 0x00</setting>
+      <setting>0x0a6e, 0x3428, 0x00</setting>
+      <setting>0x0a70, 0x043c, 0x00</setting>
+      <setting>0x0a72, 0x183c, 0x00</setting>
+      <setting>0x0a74, 0x243c, 0x00</setting>
+      <setting>0x0a76, 0x383c, 0x00</setting>
+      <setting>0x0404, 0x015c, 0x00</setting>
+      <setting>0x0406, 0x0138, 0x00</setting>
+      <setting>0x040a, 0x0115, 0x00</setting>
+      <setting>0x040c, 0x022a, 0x00</setting>
+      <setting>0x040e, 0xbc52, 0x00</setting>
+      <setting>0x0410, 0x0056, 0x00</setting>
+      <setting>0x0412, 0x00ac, 0x00</setting>
+      <setting>0x0414, 0x6907, 0x00</setting>
+      <setting>0x0422, 0x0011, 0x00</setting>
+      <setting>0x0424, 0x0023, 0x00</setting>
+      <setting>0x0426, 0x2f15, 0x00</setting>
+      <setting>0x0428, 0x0016, 0x00</setting>
+      <setting>0x042a, 0x002b, 0x00</setting>
+      <setting>0x042c, 0x3483, 0x00</setting>
+      <setting>0x0324, 0x0100, 0x00</setting>
+      <setting>0x0600, 0x0D3e, 0x00</setting>
+      <setting>0x0a78, 0x0400, 0x00</setting>
+    </settingArray>
+  </initSetting>
+  <resolutionSetting index="0">
+    <resolutionAttr width="4208" height="3120" hts="5952" vts="3212" xOffset="0" yOffset="0" minFps="12.0" maxFps="29.71" vtPixClk="568000000" opPixClk="556800000" binningFactor="1" scaleFactor="1" isPdafSupported="1" mode="1"/>
+    <csiParams>
+      <visualChannel cid="0">
+        <dataType>RAW10</dataType>
+        <decodeFormat>DECODE_10BIT</decodeFormat>
+        <metaDimWidth/>
+        <metaDimHeight/>
+        <statsType/>
+      </visualChannel>
+    </csiParams>
+    <cropParams>
+      <top>0</top>
+      <bottom>0</bottom>
+      <left>0</left>
+      <right>0</right>
+    </cropParams>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x0f32, 0x0247, 0x00</setting>
+      <setting>0x0f38, 0x0374, 0x00</setting>
+      <setting>0x0f3a, 0x4007, 0x00</setting>
+      <setting>0x093e, 0x0000, 0x00</setting>
+      <setting>0x0920, 0xc106, 0x00</setting>
+      <setting>0x0922, 0x061a, 0x00</setting>
+      <setting>0x0924, 0x0206, 0x00</setting>
+      <setting>0x0926, 0x0b09, 0x00</setting>
+      <setting>0x0928, 0x0b08, 0x00</setting>
+      <setting>0x092a, 0x0a06, 0x00</setting>
+      <setting>0x092c, 0x1500, 0x00</setting>
+      <setting>0x0910, 0x0668, 0x00</setting>
+      <setting>0x0912, 0x0096, 0x00</setting>
+      <setting>0x0914, 0x0022, 0x00</setting>
+      <setting>0x0916, 0x0022, 0x00</setting>
+      <setting>0x091a, 0x0024, 0x00</setting>
+      <setting>0x0938, 0x0000, 0x00</setting>
+      <setting>0x0904, 0x2bb0, 0x00</setting>
+      <setting>0x0942, 0x0008, 0x00</setting>
+      <setting>0x0944, 0x0100, 0x00</setting>
+      <setting>0x0946, 0x0004, 0x00</setting>
+      <setting>0x0520, 0x0100, 0x00</setting>
+      <setting>0x0532, 0x0100, 0x00</setting>
+      <setting>0x0a2a, 0x8060, 0x00</setting>
+      <setting>0x0a2c, 0x2020, 0x00</setting>
+      <setting>0x0a32, 0x0301, 0x00</setting>
+      <setting>0x0a26, 0x0048, 0x00</setting>
+      <setting>0x0a28, 0x001a, 0x00</setting>
+      <setting>0x0a36, 0x0000, 0x00</setting>
+      <setting>0x0408, 0x0202, 0x00</setting>
+      <setting>0x0418, 0x0000, 0x00</setting>
+      <setting>0x0800, 0x0000, 0x00</setting>
+      <setting>0x0008, 0x02e8, 0x00</setting>
+      <setting>0x000c, 0x000c, 0x00</setting>
+      <setting>0x0804, 0x0010, 0x00</setting>
+      <setting>0x0026, 0x003e, 0x00</setting>
+      <setting>0x002c, 0x0c71, 0x00</setting>
+      <setting>0x005c, 0x0202, 0x00</setting>
+      <setting>0x002e, 0x1111, 0x00</setting>
+      <setting>0x0032, 0x1111, 0x00</setting>
+      <setting>0x0006, 0x0c8c, 0x00</setting>
+      <setting>0x0074, 0x0d19, 0x00</setting>
+      <setting>0x0a0e, 0x0001, 0x00</setting>
+      <setting>0x0a12, 0x1070, 0x00</setting>
+      <setting>0x0a14, 0x0c30, 0x00</setting>
+      <setting>0x075c, 0x0100, 0x00</setting>
+      <setting>0x0050, 0x4300, 0x00</setting>
+      <setting>0x0722, 0x0700, 0x00</setting>
+      <setting>0x004c, 0x0100, 0x00</setting>
+      <setting>0x0042, 0x0000, 0x00</setting>
+    </settingArray>
+  </resolutionSetting>
+  <resolutionSetting index="1">
+    <resolutionAttr width="4208" height="2368" hts="5952" vts="3212" xOffset="0" yOffset="0" minFps="12.0" maxFps="29.71" vtPixClk="568000000" opPixClk="556800000" binningFactor="1" scaleFactor="1" isPdafSupported="1" mode="0x01"/>
+    <csiParams>
+      <visualChannel cid="0">
+        <dataType>RAW10</dataType>
+        <decodeFormat>DECODE_10BIT</decodeFormat>
+        <metaDimWidth/>
+        <metaDimHeight/>
+        <statsType/>
+      </visualChannel>
+    </csiParams>
+    <cropParams>
+      <top>0</top>
+      <bottom>0</bottom>
+      <left>0</left>
+      <right>0</right>
+    </cropParams>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+      <setting>0x0f32, 0x0247,0x00</setting>
+      <setting>0x0f38, 0x0374,0x00</setting>
+      <setting>0x0f3a, 0x4007,0x00</setting>
+      <setting>0x093e, 0x0000,0x00</setting>
+      <setting>0x0920, 0xc106,0x00</setting>
+      <setting>0x0922, 0x061a,0x00</setting>
+      <setting>0x0924, 0x0206,0x00</setting>
+      <setting>0x0926, 0x0b09,0x00</setting>
+      <setting>0x0928, 0x0b08,0x00</setting>
+      <setting>0x092a, 0x0a06,0x00</setting>
+      <setting>0x092c, 0x1500,0x00</setting>
+      <setting>0x0910, 0x0668,0x00</setting>
+      <setting>0x0912, 0x0096,0x00</setting>
+      <setting>0x0914, 0x0022,0x00</setting>
+      <setting>0x0916, 0x0022,0x00</setting>
+      <setting>0x091a, 0x0024,0x00</setting>
+      <setting>0x0938, 0x0000,0x00</setting>
+      <setting>0x0904, 0x2bb0,0x00</setting>
+      <setting>0x0942, 0x0008,0x00</setting>
+      <setting>0x0944, 0x0100,0x00</setting>
+      <setting>0x0946, 0x0004,0x00</setting>
+      <setting>0x0520, 0x0100,0x00</setting>
+      <setting>0x0532, 0x0100,0x00</setting>
+      <setting>0x0a2a, 0x8060,0x00</setting>
+      <setting>0x0a2c, 0x2020,0x00</setting>
+      <setting>0x0a32, 0x0301,0x00</setting>
+      <setting>0x0a26, 0x0048,0x00</setting>
+      <setting>0x0a28, 0x0000,0x00</setting>
+      <setting>0x0a36, 0x001e,0x00</setting>
+      <setting>0x0408, 0x0202,0x00</setting>
+      <setting>0x0418, 0x0000,0x00</setting>
+      <setting>0x0800, 0x0000,0x00</setting>
+      <setting>0x0008, 0x02e8,0x00</setting>
+      <setting>0x000c, 0x000c,0x00</setting>
+      <setting>0x0804, 0x0010,0x00</setting>
+      <setting>0x0026, 0x01b6,0x00</setting>
+      <setting>0x002c, 0x0af9,0x00</setting>
+      <setting>0x005c, 0x0202,0x00</setting>
+      <setting>0x002e, 0x1111,0x00</setting>
+      <setting>0x0032, 0x1111,0x00</setting>
+      <setting>0x0006, 0x0c8c,0x00</setting>
+      <setting>0x0074, 0x0d19,0x00</setting>
+      <setting>0x0a0e, 0x0001,0x00</setting>
+      <setting>0x0a12, 0x1070,0x00</setting>
+      <setting>0x0a14, 0x0940,0x00</setting>
+      <setting>0x075c, 0x0100,0x00</setting>
+      <setting>0x0050, 0x4300,0x00</setting>
+      <setting>0x0722, 0x0700,0x00</setting>
+      <setting>0x004c, 0x0100,0x00</setting>
+      <setting>0x0042, 0x0000, 0x00</setting>
+    </settingArray>
+  </resolutionSetting>
+  <resolutionSetting index="2">
+    <resolutionAttr width="3264" height="2448" hts="8000" vts="2498" xOffset="0" yOffset="0" minFps="12.0" maxFps="30.02" vtPixClk="600000000" opPixClk="307200000" binningFactor="1" scaleFactor="1" isPdafSupported="0" mode="0x20"/>
+    <csiParams>
+      <visualChannel cid="0">
+        <dataType>RAW10</dataType>
+        <decodeFormat>DECODE_10BIT</decodeFormat>
+        <metaDimWidth/>
+        <metaDimHeight/>
+        <statsType/>
+      </visualChannel>
+    </csiParams>
+    <cropParams>
+      <top>0</top>
+      <bottom>0</bottom>
+      <left>0</left>
+      <right>0</right>
+    </cropParams>
+    <settingArray index="0" i2cAddrType="WORD" i2cDataType="WORD" delay="0">
+     <setting>0x0f32, 0x024b, 0x00</setting>
+     <setting>0x0f38, 0x0560, 0x00</setting>
+     <setting>0x0f3a, 0x4007, 0x00</setting>
+     <setting>0x093e, 0x0000, 0x00</setting>
+     <setting>0x0920, 0xc103, 0x00</setting>
+     <setting>0x0922, 0x030d, 0x00</setting>
+     <setting>0x0924, 0x0204, 0x00</setting>
+     <setting>0x0926, 0x0606, 0x00</setting>
+     <setting>0x0928, 0x0704, 0x00</setting>
+     <setting>0x092a, 0x0505, 0x00</setting>
+     <setting>0x092c, 0x0a00, 0x00</setting>
+     <setting>0x0910, 0x04ba, 0x00</setting>
+     <setting>0x0912, 0x0060, 0x00</setting>
+     <setting>0x0914, 0x000b, 0x00</setting>
+     <setting>0x0916, 0x000b, 0x00</setting>
+     <setting>0x091a, 0x0006, 0x00</setting>
+     <setting>0x0938, 0x0000, 0x00</setting>
+     <setting>0x0904, 0x2bb0, 0x00</setting>
+     <setting>0x0942, 0x0008, 0x00</setting>
+     <setting>0x0944, 0x0100, 0x00</setting>
+     <setting>0x0946, 0x0004, 0x00</setting>
+     <setting>0x0520, 0x0100, 0x00</setting>
+     <setting>0x0532, 0x0100, 0x00</setting>
+     <setting>0x0a2a, 0x8060, 0x00</setting>
+     <setting>0x0a2c, 0x2020, 0x00</setting>
+     <setting>0x0a32, 0x0301, 0x00</setting>
+     <setting>0x0a26, 0x0048, 0x00</setting>
+     <setting>0x0a28, 0x001a, 0x00</setting>
+     <setting>0x0a36, 0x0000, 0x00</setting>
+     <setting>0x0408, 0x0202, 0x00</setting>
+     <setting>0x0418, 0x0000, 0x00</setting>
+     <setting>0x0800, 0x0000, 0x00</setting>
+     <setting>0x0008, 0x03e8, 0x00</setting>
+     <setting>0x000c, 0x000c, 0x00</setting>
+     <setting>0x0804, 0x01e8, 0x00</setting>
+     <setting>0x0026, 0x018e, 0x00</setting>
+     <setting>0x002c, 0x0b21, 0x00</setting>
+     <setting>0x005c, 0x0202, 0x00</setting>
+     <setting>0x002e, 0x1111, 0x00</setting>
+     <setting>0x0032, 0x1111, 0x00</setting>
+     <setting>0x0006, 0x09c2, 0x00</setting>
+     <setting>0x0074, 0x09b9, 0x00</setting>
+     <setting>0x0a0e, 0x0001, 0x00</setting>
+     <setting>0x0a12, 0x0cc0, 0x00</setting>
+     <setting>0x0a14, 0x0990, 0x00</setting>
+     <setting>0x075c, 0x0100, 0x00</setting>
+     <setting>0x0050, 0x4300, 0x00</setting>
+     <setting>0x0722, 0x0700, 0x00</setting>
+     <setting>0x004c, 0x0100, 0x00</setting>
+    </settingArray>
+  </resolutionSetting>
+  <pdafConfig vendorID="QTI" statsDT="0" pdThreshold="0" orientation="ORIENTATION_DEFAULT" blackLevel="64" caliVersion="VERSION_2D" defocusConf="200" type="0" defocusBitShift="0" pixelOrderType="PIXEL_ORDER_DEFAULT" pdOffsetCorrection="0">
+    <sensorNativePatternInfo index="0">
+      <blockCountHorizontal>128</blockCountHorizontal>
+      <blockCountVertical>96</blockCountVertical>
+      <blockPdOffsetHorizontal>56</blockPdOffsetHorizontal>
+      <blockPdOffsetVertical>24</blockPdOffsetVertical>
+      <blockDimWidth>32</blockDimWidth>
+      <blockDimHeight>32</blockDimHeight>
+      <blockPixCoords>67, 32, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>63, 52, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>79, 32, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>83, 52, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>67, 36, LEFT_PIXEL</blockPixCoords>
+      <blockPixCoords>63, 48, LEFT_PIXEL</blockPixCoords>
+      <blockPixCoords>79, 36, LEFT_PIXEL</blockPixCoords>
+      <blockPixCoords>83, 48, LEFT_PIXEL</blockPixCoords>
+    </sensorNativePatternInfo>
+    <sensorNativePatternInfo index="1">
+      <blockCountHorizontal>128</blockCountHorizontal>
+      <blockCountVertical>74</blockCountVertical>
+      <blockPdOffsetHorizontal>56</blockPdOffsetHorizontal>
+      <blockPdOffsetVertical>0</blockPdOffsetVertical>
+      <blockDimWidth>32</blockDimWidth>
+      <blockDimHeight>32</blockDimHeight>
+      <blockPixCoords>67, 8, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>63, 28, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>79, 8, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>83, 28, RIGHT_PIXEL</blockPixCoords>
+      <blockPixCoords>67, 12, LEFT_PIXEL</blockPixCoords>
+      <blockPixCoords>63, 24, LEFT_PIXEL</blockPixCoords>
+      <blockPixCoords>79, 12, LEFT_PIXEL</blockPixCoords>
+      <blockPixCoords>83, 24, LEFT_PIXEL</blockPixCoords>
+    </sensorNativePatternInfo>
+    <bufferBlockPatternInfo index="0">
+      <stride>0</stride>
+      <bufferDataType>DATA_TYPE_RAW10_LSB</bufferDataType>
+      <bufferType>BUFFER_FLAG_SPARSE</bufferType>
+      <blockPdOffsetHorizontal>0</blockPdOffsetHorizontal>
+      <blockPdOffsetVertical>0</blockPdOffsetVertical>
+      <blockDimWidth>0</blockDimWidth>
+      <blockDimHeight>0</blockDimHeight>
+    </bufferBlockPatternInfo>
+    <bufferBlockPatternInfo index="1">
+      <stride>0</stride>
+      <bufferDataType>DATA_TYPE_RAW10_LSB</bufferDataType>
+      <bufferType>BUFFER_FLAG_SPARSE</bufferType>
+      <blockPdOffsetHorizontal>0</blockPdOffsetHorizontal>
+      <blockPdOffsetVertical>0</blockPdOffsetVertical>
+      <blockDimWidth>0</blockDimWidth>
+      <blockDimHeight>0</blockDimHeight>
+    </bufferBlockPatternInfo>
+    <windowConfigure>
+      <swWindowMode>FIXED_GRID_WINDOW</swWindowMode>
+      <fixGridWindowNumberHori>1</fixGridWindowNumberHori>
+      <fixGridwindowNumberVer>1</fixGridwindowNumberVer>
+      <afFixWindow>0.33333, 0.33334, 0.66668, 0.66668</afFixWindow>
+    </windowConfigure>
+    <pdafRegInfo>
+      <pdEnableHdrAddr>0</pdEnableHdrAddr>
+      <pdEnableAddr>0</pdEnableAddr>
+      <areaModeAddr>0</areaModeAddr>
+      <pdOutEnAddr>0</pdOutEnAddr>
+      <pdAreaXOffsetAddr>0</pdAreaXOffsetAddr>
+      <pdAreaYOffsetAddr>0</pdAreaYOffsetAddr>
+      <pdAreaWidthAddr>0</pdAreaWidthAddr>
+      <pdAreaHidthAddr>0</pdAreaHidthAddr>
+      <flexAreaEnAddr>0</flexAreaEnAddr>
+      <flexAreaXsta0Addr>0</flexAreaXsta0Addr>
+      <flexModeData>0</flexModeData>
+      <fixedModeData>0</fixedModeData>
+      <orientationAddr>0</orientationAddr>
+      <hdrEnAddr>0</hdrEnAddr>
+      <hdrBinningAddr>0</hdrBinningAddr>
+      <xAddStaAddr>0</xAddStaAddr>
+      <yAddStaAddr>0</yAddStaAddr>
+      <xAddEndAddr>0</xAddEndAddr>
+      <yAddEndAddr>0</yAddEndAddr>
+      <xOutSizeAddr>0</xOutSizeAddr>
+      <yOutSizeAddr>0</yOutSizeAddr>
+      <xEvnIncAddr>0</xEvnIncAddr>
+      <xOddIncAddr>0</xOddIncAddr>
+      <yEvnIncAddr>0</yEvnIncAddr>
+      <yOddIncAddr>0</yOddIncAddr>
+      <scaleModeAddr>0</scaleModeAddr>
+      <scaleMAddr>0</scaleMAddr>
+      <digCropXOffsetAddr>0</digCropXOffsetAddr>
+      <digCropYOffsetAddr>0</digCropYOffsetAddr>
+      <digCropImageWidthAddr>0</digCropImageWidthAddr>
+      <digCropImageHeightAddr>0</digCropImageHeightAddr>
+      <binningModeAddr>0</binningModeAddr>
+      <binningTypeAddr>0</binningTypeAddr>
+    </pdafRegInfo>
+    <reserved>0x00</reserved>
+  </pdafConfig>
+</SensorConfigurationRoot>

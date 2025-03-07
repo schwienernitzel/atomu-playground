@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- !!!!!!!!!!!!warnning!!!!!!!!!!!!  -->
+<!-- this config is used to config big memory -->
+<!-- upon the item iaware, no allowed add any item -->
+<!-- if you want to accelerate camera launch-->
+<!-- please copy the following xml to your own product folder-->
+<iaware iawareversion="1.0">
+    <feature name="Memory">
+    <!-- <config name="BigMemApp">
+            <item appname="com.huawei.camera">
+                <launch>900</launch>
+            </item>
+        </config> -->
+    </feature>
+
+    <feature name="CPU">
+        <config name="sub_switch">
+            <item type="switch">
+                <log bit="0">0</log>
+                <freq_interactive bit="1">0</freq_interactive>
+                <scroller_boost bit="3">0</scroller_boost>
+                <key_thread_boost bit="4">1</key_thread_boost>
+                <ta_app_start_boost bit="5">1</ta_app_start_boost>
+                <vr bit="8">0</vr>
+            </item>
+        </config>
+
+        <config name="enable_pg_freq">
+            <item>
+                <enable>false</enable>
+            </item>
+        </config>
+
+        <config name="cpuset_screen_on">
+            <item type="cpuset">
+                <fg>0-7</fg>
+                <bg>4-5</bg>
+                <key_bg>4-7,0</key_bg>
+                <sys_bg>4-7</sys_bg>
+                <top_app>0-7</top_app>
+                <ta_boost>0-3</ta_boost>
+                <boost>0-3</boost>
+            </item>
+        </config>
+
+        <config name="cpuset_VR">
+            <item type="cpuset">
+                <fg>0-7</fg>
+                <bg>4-7</bg>
+                <key_bg>4-7,0</key_bg>
+                <sys_bg>4-7</sys_bg>
+                <top_app>0-7</top_app>
+                <boost>0-3</boost>
+            </item>
+        </config>
+
+        <config name="cpuset_screen_off">
+            <item type="cpuset">
+                <fg>0-7</fg>
+                <bg>4-7</bg>
+                <key_bg>4-7</key_bg>
+                <sys_bg>4-7</sys_bg>
+                <top_app>0-7</top_app>
+                <boost>0-7</boost>
+            </item>
+        </config>
+
+        <!-- enable by key_thread_boost sub_switch -->
+        <config name="boost_key_thread_list">
+            <item process_name="system_server">
+                <thread_name>ActivityManag</thread_name>
+                <thread_name>android.fg</thread_name>
+                <thread_name>fingerprintServ</thread_name>
+                <thread_name>SensorService</thread_name>
+                <thread_name>HWExtMotionServ</thread_name>
+                <thread_name>sManagerService</thread_name>
+            </item>
+            <item process_name="com.android.incallui">
+                <thread_name>ndroid.incallui</thread_name>
+            </item>
+        </config>
+    </feature>
+</iaware>

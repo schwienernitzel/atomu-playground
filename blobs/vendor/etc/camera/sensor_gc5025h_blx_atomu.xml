@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<SensorConfigurationRoot>
+  <sensorSlaveInfo>
+    <sensorI2CInfo slaveAddr="0x6c" i2cMode="FAST" i2cAddrType="BYTE"/>
+    <sensorIdInfo reg="0xf0" id="0x5025" mask="0"/>
+  </sensorSlaveInfo>
+  <sensorOutput format="BAYER" connectMode="MIPI_CSI" rawOutput="10BIT" bayerPattern="RGGB"/>
+  <sensorProperty>
+    <sensingMethod>ONE_CHIP_COLOR_AREA</sensingMethod>
+    <pixSize>1.12</pixSize>
+    <cropFactor>1.0</cropFactor>
+  </sensorProperty>
+  <pixelArraySize>
+    <arraySizeWidth>2592</arraySizeWidth>
+    <arraySizeHeight>1944</arraySizeHeight>
+    <leftDummy>0</leftDummy>
+    <rightDummy>0</rightDummy>
+    <topDummy>0</topDummy>
+    <bottomDummy>0</bottomDummy>
+  </pixelArraySize>
+  <colorLevel>
+    <whiteLevel>1023</whiteLevel>
+    <rPedestal>64</rPedestal>
+    <grPedestal>64</grPedestal>
+    <gbPedestal>64</gbPedestal>
+    <bPedestal>64</bPedestal>
+  </colorLevel>
+  <opticalBlackRegionArray>
+    <!--
+    <blackRegion>0,0,0,0</blackRegion>
+  -->
+  </opticalBlackRegionArray>
+  <noiseCoeff>
+    <gradientS>2.602067e-06</gradientS>
+    <offsetS>6.899591e-05</offsetS>
+    <gradientO>-1.767500e-11</gradientO>
+    <offsetO>3.910330e-07</offsetO>
+  </noiseCoeff>
+  <rolloffConfig>
+    <enable>0</enable>
+    <fullSizeWidth>0</fullSizeWidth>
+    <fullSizeHeight>0</fullSizeHeight>
+    <fullSizeLeftCrop>0</fullSizeLeftCrop>
+    <fullSizeTopCrop>0</fullSizeTopCrop>
+  </rolloffConfig>
+  <sensorOutputRegs>
+    <xOutputReg/>
+    <yOutputReg/>
+    <lineLengthReg>0xff</lineLengthReg>
+    <frameLengthReg>0xff</frameLengthReg>
+  </sensorOutputRegs>
+  <numOfFrameSkip>1</numOfFrameSkip>
+  <numOfHDRFrameSkip>2</numOfHDRFrameSkip>
+  <maxPiplineFrameDelay>2</maxPiplineFrameDelay>
+  <sensorStreamInfo index="0">
+    <visualChannel cid="0">
+      <dataType>RAW10</dataType>
+      <decodeFormat>DECODE_10BIT</decodeFormat>
+      <metaDim/>
+      <statsType/>
+    </visualChannel>
+    <pixDataFormat>BAYER</pixDataFormat>
+  </sensorStreamInfo>
+  <metaOutInfo index="0">
+    <width>0</width>
+    <height>0</height>
+    <dataType>0</dataType>
+    <statsType>0</statsType>
+  </metaOutInfo>
+  <csiConfig>
+    <laneCount>2</laneCount>
+    <settleCount>0x14</settleCount>
+    <isCsi3Phase>0</isCsi3Phase>
+  </csiConfig>
+  <aecDataMap>
+    <aecFunctionType>
+      <fillExp>CAMKIT_FILL_EXP_DEFAULT</fillExp>
+      <calcExp>CAMKIT_CALC_EXP_GC5025</calcExp>
+      <realToRegGain>CAMKIT_REAL_TO_REG_USE_MAP</realToRegGain>
+      <regToRealGain>CAMKIT_REG_TO_REAL_USE_MAP</regToRealGain>
+      <dGainCalc>CAMKIT_DGAIN_CALC_CMP_MODE</dGainCalc>
+    </aecFunctionType>
+    <aecInfo>
+      <gain min="1.0" max="16.0"/>
+      <analogGain min="1.0" max="1.99"/>
+      <digGain min="1.0" max="8.04"/>
+      <linecount min="4" max="10000"/>
+      <vBlank min="32" max="8191"/>
+      <AGainMapCoeff m0="1" m1="0" m2="0" c0="0" c1="64" c2="0"/>
+      <linecountConfigMap>
+        <linecountMap linecount="1" type = "CUST_MODE">
+          <setting>0xd9, 0xdd, 0x00</setting>
+          <setting>0xb0, 0x58, 0x00</setting>
+        </linecountMap>
+        <linecountMap linecount="10" type = "CUST_MODE">
+          <setting>0xd9, 0xaa, 0x00</setting>
+          <setting>0xb0, 0x4b, 0x00</setting>
+        </linecountMap>
+      </linecountConfigMap>
+      <gainConfigMap>
+        <gainMap realGain="1.00" regGain="0x00" type = "CUST_MODE">
+        </gainMap>
+        <gainMap realGain="1.42" regGain="0x01" type = "CUST_MODE">
+        </gainMap>
+        <gainMap realGain="1.99" regGain="0x02" type = "CUST_MODE">
+        </gainMap>
+        <gainMap realGain="2.83" regGain="0x03" type = "CUST_MODE">
+        </gainMap>
+      </gainConfigMap>
+      <digGainDecimator>64</digGainDecimator>
+      <vertOffset>2</vertOffset>
+    </aecInfo>
+    <aecOpMap i2cAddrType="BYTE" i2cDataType="BYTE">
+      <aecSetting type="CTRL">
+        <setting>0xfe, 0x00, 0x00</setting>
+      </aecSetting>
+      <aecSetting type="LINECOUNT">
+        <reg>0x03[7:0], value[15:8]</reg>
+        <reg>0x04[7:1], value[7:1]</reg>
+      </aecSetting>
+      <aecSetting type="VBLANK">
+        <reg>0x07[4:0], value[12:8]</reg>
+        <reg>0x08[7:0], value[7:0]</reg>
+      </aecSetting>
+      <aecSetting type="CUST_MODE">
+        <reg>0xd9[7:0], value[7:0]</reg>
+        <reg>0xb0[7:0], value[7:0]</reg>
+      </aecSetting>
+      <aecSetting type="AGAIN">
+        <reg>0xb6[3:0], value[3:0]</reg>
+      </aecSetting>
+      <aecSetting type="DGAIN">
+        <reg>0xb1[3:0], value[9:6]</reg>
+        <reg>0xb2[7:2], value[5:0]</reg>
+      </aecSetting>
+    </aecOpMap>
+  </aecDataMap>
+  <sensorStreamon>
+    <settingArray index="0" i2cAddrType="BYTE" i2cDataType="BYTE" delay="0">
+      <setting>0xfe, 0x00, 0x00</setting>
+      <setting>0x3f, 0x91, 0x00</setting>
+      <setting>0xfe, 0x00, 0x00</setting>
+    </settingArray>
+  </sensorStreamon>
+  <sensorStreamoff>
+    <settingArray index="0" i2cAddrType="BYTE" i2cDataType="BYTE" delay="0">
+      <setting>0xfe, 0x00, 0x00</setting>
+      <setting>0x3f, 0x01, 0x00</setting>
+      <setting>0xfe, 0x00, 0x00</setting>
+    </settingArray>
+  </sensorStreamoff>
+  <sensorGroupon>
+    <setting>0xfe, 0x00, 0x00</setting>
+  </sensorGroupon>
+  <sensorGroupoff>
+    <setting>0xfe, 0x00, 0x00</setting>
+  </sensorGroupoff>
+  <initSetting>
+    <settingArray index="0" i2cAddrType="BYTE" i2cDataType="BYTE" delay="0">
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0xf7,0x01,0x00</setting>
+      <setting>0xf8,0x11,0x00</setting>
+      <setting>0xf9,0x00,0x00</setting>
+      <setting>0xfa,0xa0,0x00</setting>
+      <setting>0xfc,0x2a,0x00</setting>
+      <setting>0xfe,0x03,0x00</setting>
+      <setting>0x01,0x07,0x00</setting>
+      <setting>0xfc,0x2e,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0x88,0x03,0x00</setting>
+      <setting>0x03,0x07,0x00</setting>
+      <setting>0x04,0x08,0x00</setting>
+      <setting>0x05,0x02,0x00</setting>
+      <setting>0x06,0x58,0x00</setting>
+      <setting>0x08,0x20,0x00</setting>
+      <setting>0x0a,0x1c,0x00</setting>
+      <setting>0x0c,0x04,0x00</setting>
+      <setting>0x0d,0x07,0x00</setting>
+      <setting>0x0e,0x9c,0x00</setting>
+      <setting>0x0f,0x0a,0x00</setting>
+      <setting>0x10,0x30,0x00</setting>
+      <setting>0x17,0xc0,0x00</setting>
+      <setting>0x18,0x02,0x00</setting>
+      <setting>0x19,0x17,0x00</setting>
+      <setting>0x1a,0x0a,0x00</setting>
+      <setting>0x1c,0x2c,0x00</setting>
+      <setting>0x1d,0x00,0x00</setting>
+      <setting>0x1e,0xa0,0x00</setting>
+      <setting>0x1f,0xb0,0x00</setting>
+      <setting>0x20,0x22,0x00</setting>
+      <setting>0x21,0x22,0x00</setting>
+      <setting>0x26,0x22,0x00</setting>
+      <setting>0x25,0xc1,0x00</setting>
+      <setting>0x27,0x64,0x00</setting>
+      <setting>0x28,0x00,0x00</setting>
+      <setting>0x29,0x44,0x00</setting>
+      <setting>0x2b,0x80,0x00</setting>
+      <setting>0x2f,0x4d,0x00</setting>
+      <setting>0x30,0x11,0x00</setting>
+      <setting>0x31,0x20,0x00</setting>
+      <setting>0x32,0xc0,0x00</setting>
+      <setting>0x33,0x00,0x00</setting>
+      <setting>0x34,0x60,0x00</setting>
+      <setting>0x38,0x04,0x00</setting>
+      <setting>0x39,0x02,0x00</setting>
+      <setting>0x3a,0x00,0x00</setting>
+      <setting>0x3b,0x00,0x00</setting>
+      <setting>0x3c,0x08,0x00</setting>
+      <setting>0x3d,0x0f,0x00</setting>
+      <setting>0x81,0x50,0x00</setting>
+      <setting>0xcb,0x02,0x00</setting>
+      <setting>0xcd,0x4d,0x00</setting>
+      <setting>0xcf,0x50,0x00</setting>
+      <setting>0xd0,0xb3,0x00</setting>
+      <setting>0xd1,0x19,0x00</setting>
+      <setting>0xd3,0xc4,0x00</setting>
+      <setting>0xd9,0xaa,0x00</setting>
+      <setting>0xdc,0x03,0x00</setting>
+      <setting>0xdd,0xc8,0x00</setting>
+      <setting>0xe0,0x00,0x00</setting>
+      <setting>0xe1,0x1c,0x00</setting>
+      <setting>0xe3,0x2a,0x00</setting>
+      <setting>0xe4,0xc0,0x00</setting>
+      <setting>0xe5,0x06,0x00</setting>
+      <setting>0xe6,0x10,0x00</setting>
+      <setting>0xe7,0xc3,0x00</setting>
+      <setting>0xfe,0x10,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0xfe,0x10,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0x80,0x10,0x00</setting>
+      <setting>0x89,0x03,0x00</setting>
+      <setting>0x8b,0x39,0x00</setting>
+      <setting>0xfe,0x01,0x00</setting>
+      <setting>0x88,0x00,0x00</setting>
+      <setting>0x8a,0x03,0x00</setting>
+      <setting>0x8e,0xc7,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0x40,0x22,0x00</setting>
+      <setting>0x41,0x28,0x00</setting>
+      <setting>0x42,0x04,0x00</setting>
+      <setting>0x43,0x08,0x00</setting>
+      <setting>0x4e,0x0f,0x00</setting>
+      <setting>0x4f,0xf0,0x00</setting>
+      <setting>0x67,0x0c,0x00</setting>
+      <setting>0xae,0x40,0x00</setting>
+      <setting>0xaf,0x04,0x00</setting>
+      <setting>0x60,0x00,0x00</setting>
+      <setting>0x61,0x80,0x00</setting>
+      <setting>0xb0,0x4d,0x00</setting>
+      <setting>0xb1,0x01,0x00</setting>
+      <setting>0xb2,0x00,0x00</setting>
+      <setting>0xb6,0x00,0x00</setting>
+      <setting>0x91,0x00,0x00</setting>
+      <setting>0x92,0x00,0x00</setting>
+      <setting>0x94,0x02,0x00</setting>
+      <setting>0xfe,0x03,0x00</setting>
+      <setting>0x02,0x03,0x00</setting>
+      <setting>0x03,0x8e,0x00</setting>
+      <setting>0x06,0x80,0x00</setting>
+      <setting>0x15,0x00,0x00</setting>
+      <setting>0x16,0x09,0x00</setting>
+      <setting>0x18,0x0a,0x00</setting>
+      <setting>0x21,0x10,0x00</setting>
+      <setting>0x22,0x05,0x00</setting>
+      <setting>0x23,0x20,0x00</setting>
+      <setting>0x24,0x02,0x00</setting>
+      <setting>0x25,0x20,0x00</setting>
+      <setting>0x26,0x08,0x00</setting>
+      <setting>0x29,0x06,0x00</setting>
+      <setting>0x2a,0x0a,0x00</setting>
+      <setting>0x2b,0x08,0x00</setting>
+    </settingArray>
+  </initSetting>
+  <resolutionSetting index="0">
+    <resolutionAttr width="2592" height="1944" hts="4800" vts="2000" xOffset="0" yOffset="0" minFps="7.5" maxFps="30" vtPixClk="288000000" opPixClk="216000000" binningFactor="1" scaleFactor="0" isPdafSupported="0" mode="0x01"/>
+    <csiParams>
+      <visualChannel cid="0">
+        <dataType>RAW10</dataType>
+        <decodeFormat>DECODE_10BIT</decodeFormat>
+        <metaDim/>
+        <statsType/>
+      </visualChannel>
+    </csiParams>
+    <cropParams>
+      <top>0</top>
+      <bottom>0</bottom>
+      <left>0</left>
+      <right>0</right>
+    </cropParams>
+    <settingArray index="0" i2cAddrType="BYTE" i2cDataType="BYTE" delay="0">
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0x92,0x02,0x00</setting>
+      <setting>0x94,0x03,0x00</setting>
+      <setting>0x95,0x07,0x00</setting>
+      <setting>0x96,0x98,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+      </settingArray>
+  </resolutionSetting>
+   <resolutionSetting index="1">
+    <resolutionAttr width="2592" height="1458" hts="4800" vts="2000" xOffset="0" yOffset="0" minFps="7.5" maxFps="30" vtPixClk="288000000" opPixClk="216000000" binningFactor="1" scaleFactor="0" isPdafSupported="0" mode="0x01"/>
+    <csiParams>
+      <visualChannel cid="0">
+        <dataType>RAW10</dataType>
+        <decodeFormat>DECODE_10BIT</decodeFormat>
+        <metaDim/>
+        <statsType/>
+      </visualChannel>
+    </csiParams>
+    <cropParams>
+      <top>0</top>
+      <bottom>0</bottom>
+      <left>0</left>
+      <right>0</right>
+    </cropParams>
+    <settingArray index="1" i2cAddrType="BYTE" i2cDataType="BYTE" delay="0">
+      <setting>0xfe,0x00,0x00</setting>
+      <setting>0x92,0xf4,0x00</setting>
+      <setting>0x94,0x03,0x00</setting>
+      <setting>0x95,0x05,0x00</setting>
+      <setting>0x96,0xb2,0x00</setting>
+      <setting>0xfe,0x00,0x00</setting>
+    </settingArray>
+  </resolutionSetting>
+</SensorConfigurationRoot>

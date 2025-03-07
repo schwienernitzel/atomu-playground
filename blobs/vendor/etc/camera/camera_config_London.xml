@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<ProductConfigurationRoot>
+  <CameraReslotionConfig cameraID="0">
+    <snapshotResolution>
+      <Resolution width="4160" height="3120" jpegStallDuration="0.366"/>
+      <Resolution width="4160" height="2336" jpegStallDuration="0.345"/>
+      <Resolution width="4160" height="2080" jpegStallDuration="0.342"/>
+      <Resolution width="3104" height="3104" jpegStallDuration="0.258"/>
+      <Resolution width="3264" height="2448" jpegStallDuration="0.253"/>
+      <Resolution width="3264" height="1840" jpegStallDuration="0.179"/>
+      <Resolution width="3264" height="1632" jpegStallDuration="0.169"/>
+      <Resolution width="1920" height="1080" jpegStallDuration="0.116"/>
+      <Resolution width="1600" height="1200" jpegStallDuration="0.108"/>
+      <Resolution width="1200" height="1200" jpegStallDuration="0.103"/>
+      <Resolution width="1440" height="1080" jpegStallDuration="0.103"/>
+      <Resolution width="1440" height="720" jpegStallDuration="0.103"/>
+      <Resolution width="1280" height="960" jpegStallDuration="0.099"/>
+      <Resolution width="1280" height="768" jpegStallDuration="0.091"/>
+      <Resolution width="1280" height="720" jpegStallDuration="0.080"/>
+      <Resolution width="1024" height="768" jpegStallDuration="0.075"/>
+      <Resolution width="960" height="720" jpegStallDuration="0.075"/>
+      <Resolution width="800" height="600" jpegStallDuration="0.068"/>
+      <Resolution width="864" height="480" jpegStallDuration="0.067"/>
+      <Resolution width="800" height="480" jpegStallDuration="0.066"/>
+      <Resolution width="720" height="720" jpegStallDuration="0.066"/>
+      <Resolution width="720" height="480" jpegStallDuration="0.065"/>
+      <Resolution width="640" height="480" jpegStallDuration="0.061"/>
+      <Resolution width="640" height="360" jpegStallDuration="0.059"/>
+      <Resolution width="480" height="640" jpegStallDuration="0.055"/>
+      <Resolution width="480" height="360" jpegStallDuration="0.049"/>
+      <Resolution width="480" height="320" jpegStallDuration="0.049"/>
+      <Resolution width="352" height="288" jpegStallDuration="0.048"/>
+      <Resolution width="320" height="240" jpegStallDuration="0.045"/>
+      <Resolution width="240" height="320" jpegStallDuration="0.035"/>
+      <Resolution width="176" height="144" jpegStallDuration="0.030"/>
+    </snapshotResolution>
+    <HFRResolution>
+      <Resolution width="640" height="480"/>
+    </HFRResolution>
+  </CameraReslotionConfig>
+  <CameraReslotionConfig cameraID="1">
+    <snapshotResolution>
+      <Resolution width="1600" height="1200" jpegStallDuration="0.108"/>
+      <Resolution width="1200" height="1200" jpegStallDuration="0.103"/>
+      <Resolution width="1440" height="1080" jpegStallDuration="0.103"/>
+      <Resolution width="1280" height="960" jpegStallDuration="0.099"/>
+      <Resolution width="1280" height="768" jpegStallDuration="0.091"/>
+      <Resolution width="1280" height="720" jpegStallDuration="0.080"/>
+      <Resolution width="1024" height="768" jpegStallDuration="0.075"/>
+      <Resolution width="960" height="720" jpegStallDuration="0.075"/>
+      <Resolution width="800" height="600" jpegStallDuration="0.068"/>
+      <Resolution width="864" height="480" jpegStallDuration="0.067"/>
+      <Resolution width="800" height="480" jpegStallDuration="0.066"/>
+      <Resolution width="720" height="720" jpegStallDuration="0.066"/>
+      <Resolution width="720" height="480" jpegStallDuration="0.065"/>
+      <Resolution width="640" height="480" jpegStallDuration="0.061"/>
+      <Resolution width="640" height="360" jpegStallDuration="0.059"/>
+      <Resolution width="480" height="640" jpegStallDuration="0.055"/>
+      <Resolution width="480" height="360" jpegStallDuration="0.049"/>
+      <Resolution width="480" height="320" jpegStallDuration="0.049"/>
+      <Resolution width="352" height="288" jpegStallDuration="0.048"/>
+      <Resolution width="320" height="240" jpegStallDuration="0.045"/>
+      <Resolution width="240" height="320" jpegStallDuration="0.035"/>
+      <Resolution width="176" height="144" jpegStallDuration="0.030"/>
+    </snapshotResolution>
+    <HFRResolution>
+      <Resolution width="640" height="480"/>
+    </HFRResolution>
+  </CameraReslotionConfig>
+  <CameraReslotionConfig cameraID="2">
+    <snapshotResolution>
+      <Resolution width="3264" height="2448" jpegStallDuration="0.161"/>
+      <Resolution width="3264" height="1632" jpegStallDuration="0.161"/>
+      <Resolution width="3016" height="3016" jpegStallDuration="0.161"/>
+      <Resolution width="2976" height="2976" jpegStallDuration="0.161"/>
+      <Resolution width="2592" height="1944" jpegStallDuration="0.161"/>
+      <Resolution width="2448" height="2448" jpegStallDuration="0.161"/>
+      <Resolution width="2688" height="1512" jpegStallDuration="0.144"/>
+      <Resolution width="2592" height="1456" jpegStallDuration="0.133"/>
+      <Resolution width="2048" height="1536" jpegStallDuration="0.133"/>
+      <Resolution width="1920" height="1080" jpegStallDuration="0.116"/>
+      <Resolution width="1600" height="1200" jpegStallDuration="0.108"/>
+      <Resolution width="1440" height="1080" jpegStallDuration="0.103"/>
+      <Resolution width="1440" height="720" jpegStallDuration="0.103"/>
+      <Resolution width="1280" height="960" jpegStallDuration="0.099"/>
+      <Resolution width="1280" height="768" jpegStallDuration="0.091"/>
+      <Resolution width="1280" height="720" jpegStallDuration="0.080"/>
+      <Resolution width="1024" height="768" jpegStallDuration="0.075"/>
+      <Resolution width="960" height="720" jpegStallDuration="0.075"/>
+      <Resolution width="800" height="600" jpegStallDuration="0.068"/>
+      <Resolution width="864" height="480" jpegStallDuration="0.067"/>
+      <Resolution width="800" height="480" jpegStallDuration="0.066"/>
+      <Resolution width="720" height="720" jpegStallDuration="0.066"/>
+      <Resolution width="720" height="480" jpegStallDuration="0.065"/>
+      <Resolution width="640" height="480" jpegStallDuration="0.061"/>
+      <Resolution width="640" height="360" jpegStallDuration="0.059"/>
+      <Resolution width="480" height="640" jpegStallDuration="0.055"/>
+      <Resolution width="480" height="360" jpegStallDuration="0.049"/>
+      <Resolution width="480" height="320" jpegStallDuration="0.049"/>
+      <Resolution width="352" height="288" jpegStallDuration="0.048"/>
+      <Resolution width="320" height="240" jpegStallDuration="0.045"/>
+      <Resolution width="240" height="320" jpegStallDuration="0.035"/>
+      <Resolution width="176" height="144" jpegStallDuration="0.030"/>
+    </snapshotResolution>
+    <HFRResolution>
+      <Resolution width="640" height="480"/>
+    </HFRResolution>
+  </CameraReslotionConfig>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <CameraName>s5k3l6_ofilm_lnd</CameraName>
+    <Position>BACK</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <CameraName>hi1333_qtech_lnd</CameraName>
+    <Position>BACK</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <CameraName>ov13855_hlt_lnd</CameraName>
+    <Position>BACK</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>0</CameraId>
+    <CameraName>ov13855_ofilm_lnd</CameraName>
+    <Position>BACK</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>1</CameraId>
+    <CameraName>sp2509_byd_lnd</CameraName>
+    <Position>BACK_AUX</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>1</CameraId>
+    <CameraName>sp2509_ofilm_lnd</CameraName>
+    <Position>BACK_AUX</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>1</CameraId>
+    <CameraName>gc2375_kingcome_lnd</CameraName>
+    <Position>BACK_AUX</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>1</CameraId>
+    <CameraName>gc2375_qtech_lnd</CameraName>
+    <Position>BACK_AUX</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>1</CameraId>
+    <CameraName>sp2509_altek_lnd</CameraName>
+    <Position>BACK_AUX</Position>
+    <MountAngle>90</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>hi846_hlt_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>ov8856_sunwin_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>hi846_kingcome_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>gc8034_wingshing_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>hi846_jsl_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>hi556_hlt_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+  <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>gc5025_blx_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+    <CameraModuleConfig>
+    <CameraId>2</CameraId>
+    <CameraName>gc8034_hlt_lnd</CameraName>
+    <Position>FRONT</Position>
+    <MountAngle>270</MountAngle>
+  </CameraModuleConfig>
+</ProductConfigurationRoot>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<CameraModuleConfigurationRoot>
+  <ModuleInfo>
+    <SensorName>hi846_kingcome_lnd</SensorName>
+    <FlashName>pmic_front</FlashName>
+    <ChromatixName>hi846_kingcome_lnd_chromatix</ChromatixName>
+    <EepromName>hi846</EepromName>
+    <ModesSupported>1</ModesSupported>
+  </ModuleInfo>
+  <CSIInfo>
+    <CSIDCore>1</CSIDCore>
+    <LaneMask>0x07</LaneMask>
+    <LaneAssign>0x4320</LaneAssign>
+    <ComboMode>0</ComboMode>
+  </CSIInfo>
+  <LensInfo>
+    <FocalLength>2.48</FocalLength>
+    <FNumber>2.0</FNumber>
+    <TotalFocusDistance>1.9</TotalFocusDistance>
+    <HorizontalViewAngle>66.0</HorizontalViewAngle>
+    <VerticalViewAngle>51.9</VerticalViewAngle>
+    <MinFocusDistance>0.1</MinFocusDistance>
+    <FocalLength35mm>23.48</FocalLength35mm>
+  </LensInfo>
+  <PowerSequece type="POWER_UP">
+    <power seqType="GPIO" seqVal="RESET" cfgVal="LOW" delay="1"/>
+    <power seqType="VREG" seqVal="VANA" cfgVal="2800000" delay="0"/>
+    <power seqType="VREG" seqVal="VDIG" cfgVal="1200000" delay="0"/>
+    <power seqType="CLK" seqVal="MCLK" cfgVal="24000000" delay="0"/>
+    <power seqType="GPIO" seqVal="RESET" cfgVal="HIGH" delay="1"/>
+  </PowerSequece>
+  <PowerSequece type="POWER_DOWN">
+    <power seqType="GPIO" seqVal="RESET" cfgVal="LOW" delay="0"/>
+    <power seqType="CLK" seqVal="MCLK" cfgVal="0" delay="1"/>
+    <power seqType="VREG" seqVal="VDIG" cfgVal="0" delay="0"/>
+    <power seqType="VREG" seqVal="VANA" cfgVal="0" delay="0"/>
+  </PowerSequece>
+</CameraModuleConfigurationRoot>

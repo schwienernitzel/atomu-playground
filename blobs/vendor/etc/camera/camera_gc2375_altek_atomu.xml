@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<CameraModuleConfigurationRoot>
+  <ModuleInfo>
+    <SensorName>gc2375_altek_atomu</SensorName>
+    <ChromatixName>gc2375_byd_atomu_chromatix</ChromatixName>
+    <EepromName>gc2375_altek</EepromName>
+    <ModesSupported>1</ModesSupported>
+  </ModuleInfo>
+  <MoudleIdInfo>
+    <VendorIdInfo i2c_addr="0xA4" reg_addr_type="WORD" reg="0x0004" data_type ="BYTE" id="0x23" mask="0x3F"/>
+  </MoudleIdInfo>
+  <CSIInfo>
+    <CSIDCore>1</CSIDCore>
+    <LaneMask>0x18</LaneMask>
+    <LaneAssign>0x3</LaneAssign>
+    <ComboMode>1</ComboMode>
+  </CSIInfo>
+  <LensInfo>
+    <FocalLength>2.0</FocalLength>
+    <FNumber>2.4</FNumber>
+    <TotalFocusDistance>2.28</TotalFocusDistance>
+    <HorizontalViewAngle>87.0</HorizontalViewAngle>
+    <VerticalViewAngle>83.0</VerticalViewAngle>
+    <MinFocusDistance>0.22</MinFocusDistance>
+    <FocalLength35mm>24.5</FocalLength35mm>
+  </LensInfo>
+  <PowerSequece type="POWER_UP">
+    <power seqType="GPIO" seqVal="RESET" cfgVal="LOW" delay="0"/>
+    <power seqType="GPIO" seqVal="STANDBY" cfgVal="HIGH" delay="0"/>
+    <power seqType="VREG" seqVal="VIO" cfgVal="1800000" delay="1"/>
+    <power seqType="VREG" seqVal="VANA" cfgVal="2800000" delay="1"/>
+    <power seqType="CLK" seqVal="MCLK" cfgVal="24000000" delay="1"/>
+    <power seqType="GPIO" seqVal="STANDBY" cfgVal="LOW" delay="0"/>
+    <power seqType="GPIO" seqVal="RESET" cfgVal="HIGH" delay="0"/>
+  </PowerSequece>
+  <PowerSequece type="POWER_DOWN">
+    <power seqType="GPIO" seqVal="STANDBY" cfgVal="HIGH" delay="1"/>
+    <power seqType="GPIO" seqVal="RESET" cfgVal="LOW" delay="1"/>
+    <power seqType="CLK" seqVal="MCLK" cfgVal="0" delay="1"/>
+    <power seqType="VREG" seqVal="VANA" cfgVal="0" delay="0"/>
+    <power seqType="VREG" seqVal="VIO" cfgVal="0" delay="1"/>
+    <power seqType="GPIO" seqVal="STANDBY" cfgVal="LOW" delay="0"/>
+  </PowerSequece>
+</CameraModuleConfigurationRoot>
