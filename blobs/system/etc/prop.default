@@ -1,0 +1,15 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=1
+ro.allow.mock.location=0
+ro.debuggable=0
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Tue Feb 25 16:29:59 CST 2020
+ro.bootimage.build.date.utc=1582619399
+ro.bootimage.build.fingerprint=Huawei/generic_a53/generic_a53:8.0.0/OPR6.170623.013/jenkin02251626:user/test-keys
+persist.sys.usb.config=none

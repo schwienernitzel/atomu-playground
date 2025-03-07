@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!-- PRO BE -->
+    <carrier_config>
+        <int name="utUseApn" value="1"/>
+        <string name="utNafSrvAddr">xcap.ims.mnc001.mcc206.pub.3gppnetwork.org</string>
+        <int name="utNafPort" value="80"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc001.mcc206.pub.3gppnetwork.org</string>
+        <int name="utBsfPort" value="80"/>
+        <string name="utParamsCfg">1:1,6:1,19:1</string>
+        <int name="callWaitingMode" value="11"/>
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="false"/>
+        <!--VOLTE TA-->
+        <boolean name="carrier_default_volte_switch_on_bool" value="true" />
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">10101010</string>
+        <!--VOWIFI NO TA-->
+        <string name="vowifiHplmnListItem">20601, epdg.epc.mnc001.mcc206.pub.3gppnetwork.org</string>
+        <string name="Ikev2EncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="Ikev2PrfAlg">RCT_ALG_HMAC_SHA2_256</string>
+        <string name="Ikev2HashAlg">RCT_ALG_HMAC_SHA2_256</string>
+        <string name="Ikev2DhGroup">RCT_ALG_MODP1536</string>
+        <string name="EspEncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="EspAuthAlg">RCT_ALG_HMAC_SHA2_256</string>
+        <int name="Ikev2IkeSaRekeyTimerSec" value="64800"/>
+        <int name="Ikev2IPsecSaRekeyTimeSec" value="64800"/>
+        <int name="Ikev2MaxRetryToSend" value="1"/>
+        <int name="Ikev2IntervalToSend" value="1"/>
+        <int name="vowifiRoamingConfig" value="0"/>
+        <boolean name="vowifiStaticUnroaming" value="true"/>
+        <boolean name="vowifiStaticRoaming" value="true"/>
+        <boolean name="vowifi_ut_switch" value="true"/>
+        <boolean name="vowifi_roaming_switch" value="true"/>
+        <boolean name="vowifi_mmsut_roaming_switch" value="true"/>
+        <string name="vowifi_UT_APN">hos</string>
+        <int name="vowifi_mmsut_pdn_type" value="3"/>
+    </carrier_config>
+</carrier_config_list>

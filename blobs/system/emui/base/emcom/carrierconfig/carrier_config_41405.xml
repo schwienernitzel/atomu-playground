@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<carrier_config_list>
+    <!--OOREDOO_MM 41405-->
+    <carrier_config>
+        <!--UT NO TA -->
+        <string name="ssTypeUseCsOnly">1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23</string>
+        <int name="callWaitingMode" value="11"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc005.mcc414.pub.3gppnetwork.org</string>
+        <int name="utBsfPort" value="80"/>
+        <int name="utBearType" value="2"/>
+        <!--VOLTE NO TA-->
+        <boolean name="groupChatDefaultsToMMS" value="false" />
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">10101010</string>
+    </carrier_config>
+</carrier_config_list>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!-- Movistar PE -->
+    <carrier_config>
+        <!--UT TA -->
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="false" />
+        <!--VOLTE TA-->
+        <boolean name="carrier_default_volte_switch_on_bool" value="true"/>
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">10101010</string>
+        <!--VOWIFI NO TA -->
+        <boolean name="vowifi_ut_switch" value="true" />
+        <boolean name="carrier_wfc_supports_cellular_preferred_bool" value="true"/>
+        <int name="carrier_default_wfc_ims_mode_int" value="1"/>
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="1"/>
+        <string name="vowifiHplmnListItem">71606, epdg.epc.mnc006.mcc716.pub.3gppnetwork.org</string>
+        <string name="Ikev2EncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="Ikev2PrfAlg">RCT_ALG_HMAC_SHA1</string>
+        <string name="Ikev2HashAlg">RCT_ALG_HMAC_SHA2_256</string>
+        <string name="Ikev2DhGroup">RCT_ALG_MODP1536</string>
+        <string name="EspEncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="EspAuthAlg">RCT_ALG_HMAC_SHA2_256</string>
+        <int name="Ikev2SaLifeTime" value="1500" />
+        <int name="Ikev2MaxRetryToSend" value="3" />
+        <int name="IPsecSaLifeTime" value="3600" />
+        <int name="Ikev2IkeSaRekeyTimerSec" value="1500" />
+        <int name="Ikev2IPsecSaRekeyTimeSec" value="1800" />
+        <string name="vowifi_UT_APN">XCAP</string>
+        <int name="vowifiRoamingConfig" value="0" />
+        <boolean name="vowifiStaticUnroaming" value="true" />
+        <boolean name="vowifiStaticRoaming" value="true" />
+        <string name="vowifiRssiThreshold">-66,-75,-6,-7</string>
+        <string name="vowifiWifiChip24GConf">-75,-68,3,1</string>
+        <string name="vowifiWifiChip5GConf">-75,-68,3,1</string>
+        <!--Google Message config begin -->
+        <boolean name="smsUsesSimpleCharactersOnly" value="true"/>
+        <!--Google Message config end -->
+        <boolean name="carrier_hide_network_mode_bool" value="true"/>
+    </carrier_config>
+</carrier_config_list>

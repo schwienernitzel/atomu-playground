@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+  <!--TIGO_BO 73603-->
+  <carrier_config>
+    <!--VOLTE NO TA-->
+    <boolean name="utForbiddenWhenVolteSwitchOff" value="false"/>
+    <int name="callWaitingMode" value="11"/>
+    <int name="utOIRSourceMode" value="1"/>
+  </carrier_config>
+</carrier_config_list>

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<carrier_config_list>
+    <!--Freedom_CA 302490-->
+    <carrier_config>
+        <!--UT NO TA-->
+        <string name="utNafSrvAddr">xcap.ims.mnc490.mcc302.pub.3gppnetwork.org</string>
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="false"/>
+        <string name="utXcapRootUri">MYSERVICE</string>
+        <int name="utNafPort" value="8090"/>
+        <int name="utUseApn" value="1"/>
+        <int name="callWaitingMode" value="11"/>
+        <string name="ssTypeUseCsOnly">1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23</string>
+        <!--VOLTE NO TA-->
+        <boolean name="suppport_cnap_bool" value="true"/>
+        <!--VOWIFI NO TA-->
+        <string name="vowifiHplmnListItem">302490, epdg.epc.mnc490.mcc302.pub.3gppnetwork.org</string>
+        <string name="Ikev2EncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="Ikev2PrfAlg">RCT_ALG_HMAC_SHA1</string>
+        <string name="Ikev2HashAlg">RCT_ALG_HMAC_SHA1</string>
+        <string name="Ikev2DhGroup">RCT_ALG_MODP1536</string>
+        <string name="EspEncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="EspAuthAlg">RCT_ALG_HMAC_SHA1</string>
+        <int name="Ikev2SaLifeTime" value="86400"/>
+        <int name="IPsecSaLifeTime" value="86400"/>
+        <int name="Ikev2IkeSaRekeyTimerSec" value="64800"/>
+        <int name="Ikev2IPsecSaRekeyTimeSec" value="64800"/>
+        <int name="Ikev2SelfIdType" value="63"/>
+        <int name="Ikev2PeerIdType" value="65"/>
+        <int name="Ikev2PcscfIpv4Address" value="16389"/>
+        <int name="Ikev2PcscfIpv6Address" value="16390"/>
+        <int name="vowifiRoamingConfig" value="0"/>
+        <boolean name="vowifiStaticUnroaming" value="true"/>
+        <boolean name="vowifiStaticRoaming" value="true"/>
+        <boolean name="vowifi_ut_switch" value="true"/>
+        <string name="vowifi_UT_APN">xcap.freedommobile.ca</string>
+        <int name="vowifi_mmsut_pdn_type" value="3"/>
+        <boolean name="vowifi_roaming_switch" value="true"/>
+        <boolean name="vowifi_mms_switch" value="true" />
+        <!--Google Message config begin -->
+        <boolean name="useCustomUserAgent" value="true" />
+        <!--Google Message config end -->
+        <!--VOWIFI UI-->
+        <string name="carrier_vowifi_hd_icon_flag">10100010</string>
+    </carrier_config>
+</carrier_config_list>

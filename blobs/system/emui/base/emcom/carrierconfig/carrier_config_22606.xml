@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!--DT_RO-->
+    <carrier_config>
+        <boolean name="vm_edit_to_sim_bool" value="false"/>
+        <!--UT NO TA-->
+        <string name="utParamsCfg">19:1</string>
+        <int name="cbs_discard_strangechar_int" value="1" />
+    </carrier_config>
+</carrier_config_list>

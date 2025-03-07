@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!--TELE2_RU 25020-->
+    <carrier_config>
+        <!-- UT -->
+        <int name="callWaitingMode" value="11"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc020.mcc250.pub.3gppnetwork.org</string>
+    </carrier_config>
+</carrier_config_list>
